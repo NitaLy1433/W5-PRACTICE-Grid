@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Card Grid</title>
+
+<style>
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  padding: 20px;
+  align-items: start;
+}
+
+.span2 {
+  grid-column: span 2;
+}
+
+
+.card {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  
+  gap: 10px;
+
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+.card .image {
+  background: #ccc;
+  height: 200px;
+  border-radius: 6px;
+}
+
+
+.card p {
+  margin: 0;
+}
+
+
+.card button {
+  justify-self: start;
+  padding: 8px 16px;
+  border: none;
+  background: #444;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="cards-container">
+
+  <div class="card">
+    <div class="image"></div>
+    <h3>Card Title</h3>
+    <p>Short description about the card.</p>
+    <button>Action</button>
+  </div>
+
+  <div class="card span2">
+    <div class="image"></div>
+    <h3>Big Card</h3>
+    <p>This card spans two columns and contains more text. The button should still align with the others.</p>
+    <button>Action</button>
+  </div>
+
+  <div class="card">
+    <div class="image"></div>
+    <h3>Card Title</h3>
+    <p>Short text.</p>
+    <button>Action</button>
+  </div>
+
+  <div class="card">
+    <div class="image"></div>
+    <h3>Another Card</h3>
+    <p>This is another card with a button aligned at the bottom.</p>
+    <button>Action</button>
+  </div>
+
+</div>
+
+</body>
+</html>
